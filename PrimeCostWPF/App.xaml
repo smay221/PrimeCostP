@@ -1,0 +1,23 @@
+﻿<Application x:Class="PrimeCostWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PrimeCostWPF"
+             xmlns:viewModel="clr-namespace:PrimeCostWPF.ViewModel"
+             xmlns:view="clr-namespace:PrimeCostWPF.View.UserControls">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type viewModel:SubComplexViewModel}">
+            <view:UserControlSubComplex></view:UserControlSubComplex>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:BlockViewModel}">
+            <view:UserControlBlock></view:UserControlBlock>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type viewModel:DownViewModel}">
+            <view:UserControlDown></view:UserControlDown>
+        </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
